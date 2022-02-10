@@ -13,7 +13,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth')->except('profile');
+        $this->middleware('auth')->only(['index']);
     }
 
     /**
@@ -24,5 +25,9 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+    public function profile()
+    {
+        return "Home Controller Profile page";
     }
 }
