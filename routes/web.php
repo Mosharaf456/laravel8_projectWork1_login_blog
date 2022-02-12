@@ -23,6 +23,6 @@ Route::get('/home/profile', [App\Http\Controllers\HomeController::class, 'profil
 //without email verify
 Route::resource('/videos' , 'VideosController')->middleware('auth');
 
-Route::get('/admin','AdminController@index')->middleware('auth');
+Route::get('/admin','AdminController@index')->middleware('AdminMiddle');
 
 
