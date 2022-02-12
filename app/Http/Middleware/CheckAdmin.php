@@ -18,9 +18,15 @@ class CheckAdmin
     public function handle(Request $request, Closure $next)
     {
         $user = Auth::user();
-        if($user->user_type !="admin") return back();
-
-        return $next($request);
+        
+        if($user->user_type =="admin" || $user->user_type =="subadmin")
+         {
+            return $next($request);
+         }
+         else
+         {
+            return back();
+         }
         
     }
 }
