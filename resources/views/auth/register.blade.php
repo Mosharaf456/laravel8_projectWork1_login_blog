@@ -38,6 +38,7 @@
                                 @enderror
                             </div>
                         </div>
+                        
                         <div class="row mb-3">
                             <label for="phone" class="col-md-4 col-form-label text-md-end">Phone</label>
 
@@ -51,10 +52,7 @@
                                 @enderror
                             </div>
                         </div>
-                        {{-- <div class="form-group">
-                            <label for="phone">Phone</label>
-                            <input id="phone" type="text" class="form-control" name="phone">
-                        </div> --}}
+                   
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 

@@ -37,6 +37,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    
     // to change email to phone login
     // public function username()
     // {
